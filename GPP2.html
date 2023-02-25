@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" >
+    <head>
+      <link rel = "stylesheet" href ="mystyle.css">
+
+        <title>Welcome to Backer</title>
+        <meta charset="utf-8">
+
+        <!-- Bootstrap code FROM W3SCHOOLS -->
+     <style>
+         .affix {
+            top: 0;
+            width: 99%;
+            padding-top: 60px;
+            z-index: 9999 !important; }
+
+        .affix + .home{
+            padding-top: 70px; }
+    </style>
+    </head>
+
+    <body>
+      <section class="home" >
+        <div >
+          <img id ="logo" src="GP21.png" width="200" height="110" alt= "logo" >
+  <!-- Navigation  -->
+          <nav >
+            <div class="topnav">
+              <a class="active" href="GPP2.html">     Home       </a>
+              <a href="joins.html" > Join with us </a>
+            </div>
+          </nav>
+            <!--End Of The Navigation Area -->
+  </div>
+    </section>
+
+
+<br>
+
+<div class = "content ">
+ <h2>Backer</h2>
+ <h3>!Do you want to increase your sales</h3>
+ <h3>!Do you want to manage your storage</h3>
+ <h3>Wer are here to help you .. </h3>
+  </div>
+
+  <div class="main">
+      <div class="row">
+          <div class="column">
+              <div class="product">
+                    <div class="text">
+                      <h3>Backer team</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="main">
+              <div class="row">
+                  <div class="column">
+                      <div class="product">
+                        <img src="GP23.png" alt="CeraVe" class="image">
+                    <h3> :Our goal is to develop the business in terms of</h3>
+                    <h3>..inventory management, analyzing sales and predicting what is most in demand</h3>
+                      </div>
+                  </div>
+
+
+<div class="icon-bar">
+ <a href="https://twitter.com/dermacare3"><i class="fa fa-twitter"></i></a>
+ <a href="https://www.instagram.com/frezyderm_ksa/"><i class="fa fa-instagram"></i></a>
+ <a href="https://www.facebook.com/frezyderm/"><i class="fa fa-facebook"></i></a>
+ <a href="http://www.frezyderm.com/"><i class="fa fa-globe"></i></a>
+ <a href="mailto:dermacare3@gmail.com"><i class="fa fa-envelope"></i> </a>
+</div> <!--End Of Contact-->
+
+<!-- footer -->
+<div class = "footer" >
+<h6> copyright reseved &copy; 2020 </h6>
+</div> <!--End Of Footer-->
+
+
+
+<!-- ALL JS CODES ARE FROM W3SHOOLS. -->
+<!-- JS for slidshow -->
+<script>
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+    var i;
+
+    var slides = document.getElementsByClassName("mySlides");
+
+        for (i = 0; i < slides.length; i++) {
+
+            slides[i].style.display = "none"; }
+
+            slideIndex++;
+
+        if (slideIndex > slides.length) {slideIndex = 1}
+
+            slides[slideIndex-1].style.display = "block";
+
+                setTimeout(showSlides, 1800); // Change image every 2 seconds
+
+            }
+
+</script>
+
+<!-- JS for pic -->
+
+<script>
+
+filterSelection("all")
+
+function filterSelection(c) {
+
+    var x, i;
+
+    x = document.getElementsByClassName("column");
+
+    if (c == "all") c = "";
+
+        for (i = 0; i < x.length; i++) {
+
+            w3RemoveClass(x[i], "show");
+
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");}
+
+        }
+function w3AddClass(element, name) {
+
+    var i, arr1, arr2;
+
+    arr1 = element.className.split(" ");
+
+    arr2 = name.split(" ");
+
+        for (i = 0; i < arr2.length; i++) {
+
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+
+        }
+}
+function w3RemoveClass(element, name) {
+
+    var i, arr1, arr2;
+
+    arr1 = element.className.split(" ");
+
+    arr2 = name.split(" ");
+
+        for (i = 0; i < arr2.length; i++) {
+
+            while (arr1.indexOf(arr2[i]) > -1) {
+
+                arr1.splice(arr1.indexOf(arr2[i]), 1);}
+
+        }
+    element.className = arr1.join(" ");
+
+}
+</script>
+
+
+<!-- JS for tab -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- JS for comments-->
+
+<script>
+
+// Get the modal
+var modal = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";}
+}
+</script>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "308e585d-9822-423a-a966-96cacfaa33a3", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "46800da2-425d-4ba3-bdb3-1f1e6f57f6d6", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>

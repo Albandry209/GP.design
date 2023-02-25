@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" >
+    <head>
+      <link rel = "stylesheet" href ="mystyle.css">
+
+        <title>  Sign in </title>
+        <meta charset="utf-8">
+
+        <!-- Bootstrap code FROM W3SCHOOLS -->
+     <style>
+         .affix {
+            top: 0;
+            width: 99%;
+            padding-top: 60px;
+            z-index: 9999 !important; }
+
+        .affix + .home{
+            padding-top: 70px; }
+    </style>
+    <style>
+body {/* style of log in*/
+  box-sizing: border-box;
+}
+/* Add padding to containers */
+.container {
+  padding: 10px;
+  background-color: WhiteSmoke;
+  width: 600px;
+
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color:DarkCyan;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}/* style of log in*/
+</style>
+    </head>
+
+    <body>
+      <section class="home" >
+        <div >
+          <img id ="logo" src="GP21.png" width="200" height="110" alt= "logo" >
+  <!-- Navigation  -->
+          <nav >
+            <div class="topnav">
+              <a class="active" href="GPP2.html" > Home</a>
+            </div>
+          </nav>
+            <!--End Of The Navigation Area -->
+          </div>
+    </section>
+
+
+<br><br><br>
+  <div class = "content ">
+    <h2>Join with us  </h2>
+  </div>
+
+  <div class="main">
+      <div class="row">
+          <div class="column">
+              <div class="product">
+                <div class="container">
+            <p>Please fill in this form to create an account</p>
+            <hr>
+
+             <label for="email"><b>Email</b></label>
+             <input type="text" placeholder="example@hotmail.com" name="email" id="email" required>
+
+             <label for="psw"><b>Password</b></label>
+             <input type="password" placeholder=" " name="psw" id="psw" required>
+
+            <label for="email"><b>Upload dataset</b></label>
+            <input type="text" placeholder="zip files" name="psw-repeat" id="psw-repeat" required>
+            <hr>
+             <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+             <button type="submit" class="registerbtn">Register</button>
+             </div>
+
+             <!--End Of The Navigation Area
+            <div class="container signin">
+                  <p>Already have an account? <a href="#">Sign in</a>.</p>
+                </div>-->
+               </form>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+<!-- footer -->
+<div class = "footer" >
+<h6> copyright reseved &copy; 2020 </h6>
+</div> <!--End Of Footer-->
+
+
+
+<!-- ALL JS CODES ARE FROM W3SHOOLS. -->
+<!-- JS for slidshow -->
+<script>
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+    var i;
+
+    var slides = document.getElementsByClassName("mySlides");
+
+        for (i = 0; i < slides.length; i++) {
+
+            slides[i].style.display = "none"; }
+
+            slideIndex++;
+
+        if (slideIndex > slides.length) {slideIndex = 1}
+
+            slides[slideIndex-1].style.display = "block";
+
+                setTimeout(showSlides, 1800); // Change image every 2 seconds
+
+            }
+
+</script>
+
+<!-- JS for pic -->
+
+<script>
+
+filterSelection("all")
+
+function filterSelection(c) {
+
+    var x, i;
+
+    x = document.getElementsByClassName("column");
+
+    if (c == "all") c = "";
+
+        for (i = 0; i < x.length; i++) {
+
+            w3RemoveClass(x[i], "show");
+
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");}
+
+        }
+function w3AddClass(element, name) {
+
+    var i, arr1, arr2;
+
+    arr1 = element.className.split(" ");
+
+    arr2 = name.split(" ");
+
+        for (i = 0; i < arr2.length; i++) {
+
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+
+        }
+}
+function w3RemoveClass(element, name) {
+
+    var i, arr1, arr2;
+
+    arr1 = element.className.split(" ");
+
+    arr2 = name.split(" ");
+
+        for (i = 0; i < arr2.length; i++) {
+
+            while (arr1.indexOf(arr2[i]) > -1) {
+
+                arr1.splice(arr1.indexOf(arr2[i]), 1);}
+
+        }
+    element.className = arr1.join(" ");
+
+}
+</script>
+
+
+<!-- JS for tab -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!-- JS for comments-->
+
+<script>
+
+// Get the modal
+var modal = document.getElementById('id01');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+if (event.target == modal) {
+    modal.style.display = "none";}
+}
+</script>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "308e585d-9822-423a-a966-96cacfaa33a3", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "46800da2-425d-4ba3-bdb3-1f1e6f57f6d6", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
